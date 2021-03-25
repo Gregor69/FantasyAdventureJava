@@ -33,4 +33,10 @@ public class ClericTest {
         cleric.setHealingPower(HealingPower.STICKING_PLASTER);
         assertEquals(HealingPower.STICKING_PLASTER, cleric.getHealingPower());
     }
+
+    @Test
+    public void addHealthFromHealer(){
+        cleric.addHealthFromHealingPower(HealingPower.HERBS);
+        assertEquals(105, cleric.getHealth());
+    }
 }

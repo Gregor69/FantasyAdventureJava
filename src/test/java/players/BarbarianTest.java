@@ -32,4 +32,10 @@ public class BarbarianTest {
         barbarian.setWeapons(Weapons.HAMMER);
         assertEquals(Weapons.HAMMER, barbarian.getWeapons());
     }
+
+    @Test
+    public void removeFromHealthFromWeapon(){
+        barbarian.removeHealthFromWeapon(Weapons.HAMMER);
+        assertEquals(75, barbarian.getHealth());
+    }
 }
