@@ -1,15 +1,22 @@
-package Players;
+package players;
+
+import equipment.Weapons;
 
 public class Knight extends Player {
 
-    private ArrayList<Weapon> weapons;
+    private Weapons weapons;
 
-    public Knight(String name, int health) {
+    public Knight (String name, int health, Weapons weapons) {
         super(name, health);
-        this.weapons = new ArrayList<Weapon>();
+        this.weapons = weapons;
     }
 
-    public ArrayList<Weapon> getWeapons() {
+    public Weapons getWeapons() {
         return weapons;
     }
+
+    public void setWeapons(Weapons weapons) {
+        this.weapons = weapons;
+    }
 }
+

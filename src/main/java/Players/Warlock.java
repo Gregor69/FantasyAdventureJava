@@ -1,28 +1,37 @@
-package Players;
+package players;
 
-import com.sun.org.apache.xml.internal.resolver.readers.CatalogReader;
+import equipment.Creatures;
+import equipment.Spells;
 
 import java.util.ArrayList;
 
 public class Warlock extends Player {
 
 
-    private ArrayList<Spell> spells;
-    private ArrayList<Creature> creatures;
+    private Spells spells;
+    private Creatures creatures;
 
-    public Warlock(String name, int health) {
+
+
+    public Warlock(String name, int health, Spells spells, Creatures creatures) {
         super(name, health);
-        this.creatures = new ArrayList<Creature>();
-        this.spells = new ArrayList<Spell>();
+        this.spells = spells;
+        this.creatures = creatures;
     }
 
-
-    public ArrayList<Spell> getSpells() {
-        return spells;
-    }
-
-    public ArrayList<Creature> getCreatures() {
+    public Creatures getCreatures() {
         return creatures;
     }
 
+    public void setCreatures(Creatures creatures) {
+        this.creatures = creatures;
+    }
+
+    public Spells getSpells() {
+        return spells;
+    }
+
+    public void setSpells(Spells spells) {
+        this.spells = spells;
+    }
 }

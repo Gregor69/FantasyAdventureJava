@@ -1,23 +1,35 @@
-package Players;
+package players;
+
+import equipment.Creatures;
+import equipment.Spells;
 
 public class Wizard extends Player {
 
 
-    private ArrayList<Spell> spells;
-    private ArrayList<Creature> creatures;
+    private Spells spells;
+    private Creatures creatures;
 
-    public Wizard(String name, int health) {
+    public Wizard(String name, int health, Spells spells, Creatures creatures) {
         super(name, health);
-        this.creatures = new ArrayList<Creature>();
-        this.spells = new ArrayList<Spell>();
+        this.spells = spells;
+        this.creatures = creatures;
+
     }
 
-    public ArrayList<Spell> getSpells() {
+    public Spells getSpells() {
         return spells;
     }
 
-    public ArrayList<Creature> getCreatures() {
+    public void setSpells(Spells spells) {
+        this.spells = spells;
+    }
+
+    public Creatures getCreatures() {
         return creatures;
+    }
+
+    public void setCreatures(Creatures creatures) {
+        this.creatures = creatures;
     }
 }
 

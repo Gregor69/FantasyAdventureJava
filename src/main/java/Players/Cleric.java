@@ -1,22 +1,26 @@
-package Players;
+package players;
+
+import equipment.HealingPower;
 
 import java.util.ArrayList;
 
 public class Cleric extends Player {
 
 
-    private ArrayList<HealingTool> healingTools;
+    private HealingPower healingPower;
 
 
-    public Cleric(String name, int health) {
+    public Cleric(String name, int health, HealingPower healingPower) {
         super(name, health);
-        this.healingTools = new ArrayList<HealingTool>();
+        this.healingPower = healingPower;
 
     }
 
-    public ArrayList<HealingTool> getHealingTools() {
-        return healingTools;
+    public HealingPower getHealingPower() {
+        return healingPower;
     }
 
-
+    public void setHealingPower(HealingPower healingPower) {
+        this.healingPower = healingPower;
+    }
 }
