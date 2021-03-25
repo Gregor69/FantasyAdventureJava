@@ -1,7 +1,5 @@
 package players;
 
-import equipment.Creatures;
-import equipment.Spells;
 import equipment.Weapons;
 import org.junit.Before;
 import org.junit.Test;

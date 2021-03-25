@@ -10,12 +10,11 @@ import static org.junit.Assert.assertEquals;
 public class WarlockTest {
 
     Warlock warlock;
-    Spells spells;
-    Creatures creatures;
+
 
     @Before
     public void before (){
-        warlock = new Warlock("Hagar", 100, Spells.TRANSFORM_TO_BUNNY, Creatures.MAD_FAIRY);
+        warlock = new Warlock("Hagar", 100, Spells.TRANSFORM_TO_BUNNY, Creatures.GHOUL);
 
     }
 
@@ -31,13 +30,13 @@ public class WarlockTest {
 
     @Test
     public void setSpell(){
-        warlock.setSpells(Spells.SHRINK);
-        assertEquals(Spells.SHRINK, warlock.getSpells());
+        warlock.setSpells(Spells.TURN_TO_STONE);
+        assertEquals(Spells.TURN_TO_STONE, warlock.getSpells());
     }
 
     @Test
     public void hasCreature(){
-        assertEquals(Creatures.MAD_FAIRY, warlock.getCreatures());
+        assertEquals(Creatures.GHOUL, warlock.getCreatures());
     }
 
     @Test
